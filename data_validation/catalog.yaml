@@ -1,0 +1,10 @@
+tables:
+  - name: employee
+    connection: azure_sql
+    rules:
+      - unique: id
+      - not_null:
+          - id
+          - first_name
+      - distinct: resignation_date
+      - allow_nulls_except: id

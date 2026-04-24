@@ -1,0 +1,17 @@
+azure_sql:
+  driver: "ODBC Driver 18 for SQL Server"
+  server: "tcp:test-server-sid.database.windows.net,1433"
+  database: "test_db"
+  username: "adminsid"
+  password: "Test@02042022"
+  encrypt: "yes"
+  trust_server_certificate: "no"
+  timeout: 30
+
+oracle:
+  driver: "Oracle ODBC Driver"
+  host: "your-oracle-host"
+  port: 1521
+  service_name: "your-service"
+  username: "your-username"
+  password: "your-password"

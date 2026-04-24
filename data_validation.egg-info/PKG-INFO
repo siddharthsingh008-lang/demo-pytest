@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: data_validation
+Version: 0.1.0
+Summary: Config-driven data profiling framework
+Requires-Python: >=3.10

@@ -1,0 +1,11 @@
+# Core testing framework
+pytest
+
+# Data handling
+pandas==2.2.2
+
+# Database connectivity
+pyodbc==5.1.0
+
+# Config parsing
+PyYAML==6.0.1
