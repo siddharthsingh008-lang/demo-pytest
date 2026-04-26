@@ -55,9 +55,18 @@ jobs:
             --start-ip-address $agentIP \
             --end-ip-address $agentIP
 
-      # Run your pytest suite
+      # Run pytest and generate reports
       - name: Run tests
-        run: pytest -v
+        run: pytest -v --junitxml=pytest-report.xml --html=pytest-report.html --self-contained-html
+
+      # Upload reports as artifacts
+      - name: Upload test reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: |
+            pytest-report.xml
+            pytest-report.html
 
       # Remove firewall rule after job finishes (always runs, even if tests fail)
       - name: Remove firewall rule
