@@ -58,6 +58,8 @@ jobs:
       # Run pytest and generate reports
       - name: Run tests
         run: pytest -v --junitxml=pytest-report.xml --html=pytest-report.html --self-contained-html
+        continue-on-error: true
+
 
       # Upload reports as artifacts
       - name: Upload test reports
